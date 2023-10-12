@@ -13,7 +13,7 @@
     </div>
 
     <div class="flex items-center">
-      <div class="mr-10 md:mr-10">
+      <div class="mr-10 md:hidden">
        <button @click="switchLanguage('nl')" class="block"><img v-show="currentLanguage === 'nl'" class="w-10 h-10" src="/images/english-flag.png" alt=""></button> 
        <button @click="switchLanguage('en')" class="block"><img v-show="currentLanguage === 'en'" class="w-10 h-10" src="/images/dutch-flag.png" alt=""></button> 
 
@@ -22,6 +22,11 @@
         <li class="links lg:text-xl"><a href="#Skills">{{ language.translatedText.nav.skill }}</a></li>
         <li class="links lg:text-xl"><a href="#Projects">{{ language.translatedText.nav.projects }}</a></li>
         <li class="links lg:text-xl"><a href="#Contact">{{ language.translatedText.nav.contact }}</a></li>
+        <div class="mr-10 md:mr-10">
+       <button @click="switchLanguage('nl')" class="block"><img v-show="currentLanguage === 'nl'" class="w-10 h-10" src="/images/english-flag.png" alt=""></button> 
+       <button @click="switchLanguage('en')" class="block"><img v-show="currentLanguage === 'en'" class="w-10 h-10" src="/images/dutch-flag.png" alt=""></button> 
+
+       </div>
       </ul>
     
     <div class="relative md:hidden">
