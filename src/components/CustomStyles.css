@@ -1,0 +1,65 @@
+/* slide */
+.slide-enter-active,
+.slide-leave-active {
+  @apply transform transition duration-[400ms] ease-in-out;
+}
+
+.slide-enter-from,
+.slide-leave-to {
+  @apply -translate-y-full;
+}
+
+/* fade */
+.fade-enter-active,
+.fade-leave-active {
+  @apply opacity-0;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  @apply opacity-100;
+}
+
+.fade-form-enter-active,
+.fade-form-leave-active {
+  @apply transition-opacity duration-300;
+}
+
+.fade-form-enter-from,
+.fade-form-leave-to {
+  @apply opacity-0;
+}
+
+/* Animation links header */
+
+.links {
+  @apply relative;
+}
+
+.links::before {
+  @apply absolute -bottom-1 right-0 h-0.5 w-0 bg-primary duration-300;
+  content: "";
+}
+
+.links:hover::before {
+  @apply left-0 w-full;
+}
+
+/* Button */
+
+.custom-btn {
+  @apply inline-block 
+  rounded-md border-2 
+border-primary 
+  bg-primary px-3
+py-2 
+  text-black
+duration-100 hover:border-2 
+  sm:hover:scale-110;
+}
+
+/* h2 styling */
+
+h2 {
+  @apply text-center text-5xl font-medium text-primary;
+}
