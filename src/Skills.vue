@@ -1,7 +1,9 @@
 <template>
   <div class="text-white">
     <div class="mb-12 pt-20">
-      <h2 id="Skills">{{ language.translatedText.skills["skills.title"] }}</h2>
+      <h2 id="Skills" class="custom-title">
+        {{ language.translatedText.skills.title }}
+      </h2>
     </div>
     <div class="flex flex-wrap justify-center gap-10">
       <div
@@ -28,9 +30,6 @@
         >
           typescript
         </div>
-        <!-- <div v-if="index === 7" class="absolute bottom-[10px] text-black">
-          Responsive- design
-        </div> -->
       </div>
     </div>
   </div>
@@ -76,10 +75,6 @@ const skills = ref<Skills[]>([
     id: 7,
     img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
   },
-  // {
-  //   id: 8,
-  //   img: "./images/test.png",
-  // },
 ]);
 </script>
 

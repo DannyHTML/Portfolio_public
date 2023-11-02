@@ -1,17 +1,19 @@
 <template>
   <div class="px-5 mt-16">
-    <h2 class="mb-5" id="Contact">{{ language.translatedText.contact["contact.title"] }}</h2>
-    <div
-      class="m-auto max-w-md rounded-md border-2 border-primary border-opacity-50 p-2"
-    >
+    <h2 class="custom-title mb-5" id="Contact">
+      {{ language.translatedText.contact.title }}
+    </h2>
+    <div class="border-colour m-auto max-w-md p-2 shadow-xl">
       <form @submit.prevent="submitForm">
-
-        <label class="mb-1 inline-block" for="name">{{ language.translatedText.contact["contact.name"] }}</label><br />
+        <label class="mb-1 inline-block" for="name">{{
+          language.translatedText.contact.name
+        }}</label
+        ><br />
         <div class="relative">
           <input
             type="text"
             name="name"
-            :placeholder="language.translatedText.contact['contact.name.placeholder']"
+            :placeholder="language.translatedText.contact.name_placeholder"
             class="w-full rounded-md border-2 p-1 pl-2 focus:outline-primaryOutline"
             :class="{ 'border-red-600': isNameHidden }"
             v-model="formData.name"
@@ -20,19 +22,24 @@
           <div class="absolute -bottom-6 ml-2">
             <Transition name="fade-form">
               <p v-if="isNameHidden" :class="{ 'text-red-600': isNameHidden }">
-                {{ language.translatedText.contact["contact.name.error"] }}
+                {{ language.translatedText.contact.name_error }}
               </p>
             </Transition>
           </div>
         </div>
         <br />
-        <label class="mb-1 inline-block" for="email">{{ language.translatedText.contact["email.name"] }}</label><br />
+        <label class="mb-1 inline-block" for="email">{{
+          language.translatedText.contact.email_name
+        }}</label
+        ><br />
         <div class="relative">
           <Transition name="fade-form">
             <input
               type="email"
               name="email"
-              :placeholder="language.translatedText.contact['email.name.placeholder']"
+              :placeholder="
+                language.translatedText.contact.email_name_placeholder
+              "
               class="w-full rounded-md border-2 p-1 pl-2 focus:outline-primaryOutline"
               :class="{ 'border-red-600': isEmailHidden }"
               v-model="formData.email"
@@ -45,19 +52,24 @@
                 v-if="isEmailHidden"
                 :class="{ 'text-red-600': isEmailHidden }"
               >
-                {{ language.translatedText.contact["email.name.error"] }}
+                {{ language.translatedText.contact.email_name_error }}
               </p>
             </Transition>
           </div>
         </div>
         <br />
-        <label class="mb-1 inline-block" for="message">{{ language.translatedText.contact["message.name"] }}</label><br />
+        <label class="mb-1 inline-block" for="message">{{
+          language.translatedText.contact.message_name
+        }}</label
+        ><br />
         <div class="relative">
           <textarea
             class="h-40 w-full resize-none rounded-md border-2 pl-2 focus:outline-primaryOutline"
             :class="{ 'border-red-600': isMessageHidden }"
             name="message"
-            :placeholder="language.translatedText.contact['message.name.placeholder']"
+            :placeholder="
+              language.translatedText.contact.message_name_placeholder
+            "
             v-model="formData.message"
             @focus="isMessageHidden = false"
           ></textarea>
@@ -67,7 +79,7 @@
                 v-if="isMessageHidden"
                 :class="{ 'text-red-600': isMessageHidden }"
               >
-                {{ language.translatedText.contact["message.name.error"] }}
+                {{ language.translatedText.contact.message_name_error }}
               </p>
             </Transition>
           </div>
@@ -77,26 +89,29 @@
         <div class="relative flex justify-center">
           <TransitionGroup name="fade-form">
             <div v-if="isSubmittingMessage" class="absolute bottom-0">
-              <p class="md:text-lg">{{ language.translatedText.contact["message.sending"] }}</p>
+              <p class="md:text-lg">
+                {{ language.translatedText.contact.message_sending }}
+              </p>
             </div>
             <div v-if="submitConfirmed" class="absolute bottom-0">
-              <p class="md:text-lg">{{ language.translatedText.contact["message.sent"] }}</p>
+              <p class="md:text-lg">
+                {{ language.translatedText.contact.message_sent }}
+              </p>
             </div>
           </TransitionGroup>
         </div>
 
         <div class="mb-3 mt-3 flex justify-center">
-          <button
+          <CustomButton
             :disabled="submitting"
-            class="custom-btn w-3/5 disabled:hover:scale-100"
+            :icon="['far', 'paper-plane']"
+            :size="'lg'"
+            class="w-3/5 disabled:hover:scale-100"
           >
-            <span class="text-lg font-medium">{{ language.translatedText.contact["contact.sent.btn"] }}</span>
-            <font-awesome-icon
-              class="move-icon ml-2 md:ml-5"
-              :icon="['far', 'paper-plane']"
-              size="lg"
-            />
-          </button>
+            <span class="text-lg font-medium md:mr-3"
+              >{{ language.translatedText.contact.contact_sent_btn }}
+            </span>
+          </CustomButton>
         </div>
       </form>
     </div>
@@ -106,6 +121,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { useLanguageStore } from "./store/language";
+import CustomButton from "./components/CustomButton.vue";
 
 const language = useLanguageStore();
 

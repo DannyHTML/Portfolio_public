@@ -20,7 +20,10 @@ library.add(
   faClose,
   faArrowUpRightFromSquare,
   faGithubSquare,
-  faPaperPlane,
+  faPaperPlane
 );
 
-createApp(App).component("font-awesome-icon", FontAwesomeIcon).use(pinia).mount("#app");
+createApp(App)
+  .component("font-awesome-icon", FontAwesomeIcon)
+  .use(pinia)
+  .mount("#app");

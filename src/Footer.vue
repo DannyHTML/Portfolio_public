@@ -11,12 +11,14 @@
     </div>
     <div class="text-center text-white">
       <div>
-        <p class="mb-[2px] text-sm">{{ language.translatedText.footer["footer.title"] }}</p>
+        <p class="mb-[2px] text-sm">
+          {{ language.translatedText.footer.title }}
+        </p>
         <a href="https://github.com/DannyHTML" target="_blank"
           ><p class="-rotate-3">
             <span
               class="uppercase text-primary underline underline-offset-4 md:font-medium"
-              >{{ language.translatedText.footer["footer.author"] }}</span
+              >{{ language.translatedText.footer.author }}</span
             >
           </p>
         </a>
@@ -36,7 +38,6 @@ import { useLanguageStore } from "./store/language";
 
 const language = useLanguageStore();
 const currentYear = computed<number>(() => new Date().getFullYear());
-
 </script>
 
 <style scoped></style>
