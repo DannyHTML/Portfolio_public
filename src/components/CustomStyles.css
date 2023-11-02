@@ -33,7 +33,7 @@
 /* Animation links header */
 
 .links {
-  @apply relative;
+  @apply relative lg:text-xl;
 }
 
 .links::before {
@@ -45,21 +45,14 @@
   @apply left-0 w-full;
 }
 
-/* Button */
+/* h2 */
 
-.custom-btn {
-  @apply inline-block 
-  rounded-md border-2 
-border-primary 
-  bg-primary px-3
-py-2 
-  text-black
-duration-100 hover:border-2 
-  sm:hover:scale-110;
+.custom-title {
+  @apply text-center text-5xl font-medium text-primary;
 }
 
-/* h2 styling */
+/* Border */
 
-h2 {
-  @apply text-center text-5xl font-medium text-primary;
+.border-colour {
+  @apply border-primary border-opacity-50 border-2 rounded-md;
 }
