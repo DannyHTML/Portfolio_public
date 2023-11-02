@@ -8,8 +8,10 @@
 </template>
 
 <script setup lang="ts">
+import { PropType } from "vue";
+
 defineProps({
-  icon: Array,
-  size: String,
+  icon: Array as PropType<string[]>,
+  size: String as PropType<string>,
 });
 </script>
