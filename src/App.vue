@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import Header from "./Header.vue";
-import Home from "./Home.vue";
-import Projects from "./Projects.vue";
-import Skills from "./Skills.vue";
-import Footer from "./Footer.vue";
-import Contact from "./Contact.vue";
-import About from "./About.vue";
+import Header from "./components/sections/Header.vue"
+import Home from "./components/sections/Home.vue";
+import Projects from "./components/sections/Projects.vue";
+import Skills from "./components/sections/Skills.vue";
+import Footer from "./components/sections/Footer.vue";
+import Contact from "./components/sections/Contact.vue";
+import About from "./components/sections/About.vue";
 </script>
 
 <template>
