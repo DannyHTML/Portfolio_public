@@ -34,7 +34,7 @@
 
 <script setup lang="ts">
 import { computed } from "vue";
-import { useLanguageStore } from "./store/language";
+import { useLanguageStore } from "../../store/language";
 
 const language = useLanguageStore();
 const currentYear = computed<number>(() => new Date().getFullYear());

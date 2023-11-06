@@ -51,8 +51,8 @@
 </template>
 
 <script setup lang="ts">
-import CustomButton from "./components/CustomButton.vue";
-import { useLanguageStore } from "./store/language";
+import CustomButton from "../../components/CustomButton.vue";
+import { useLanguageStore } from "../../store/language";
 import { computed } from "vue";
 
 const language = useLanguageStore();

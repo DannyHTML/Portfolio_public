@@ -37,7 +37,7 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
-import { useLanguageStore } from "./store/language";
+import { useLanguageStore } from "../../store/language";
 
 const language = useLanguageStore();
 

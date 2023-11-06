@@ -143,7 +143,7 @@
 
 <script setup lang="ts">
 import { onBeforeUnmount, onMounted, ref } from "vue";
-import { useLanguageStore } from "./store/language";
+import { useLanguageStore } from "../../store/language";
 
 const isHidden = ref<boolean>(true);
 const scrolled = ref<boolean>(false);

@@ -120,8 +120,8 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
-import { useLanguageStore } from "./store/language";
-import CustomButton from "./components/CustomButton.vue";
+import { useLanguageStore } from "../../store/language";
+import CustomButton from "../../components/CustomButton.vue";
 
 const language = useLanguageStore();
 
