@@ -105,7 +105,7 @@
           <CustomButton
             :disabled="submitting"
             :icon="['far', 'paper-plane']"
-            :size="'lg'"
+            size="lg"
             class="w-3/5 disabled:hover:scale-100"
           >
             <span class="text-lg font-medium md:mr-3"

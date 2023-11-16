@@ -39,7 +39,7 @@
           </div>
           <div>
             <a :href="project.urlGithub" target="_blank"
-              ><CustomButton :icon="['fab', 'square-github']" :size="'lg'"
+              ><CustomButton :icon="['fab', 'square-github']" size="lg"
                 >github</CustomButton
               ></a
             >
