@@ -167,4 +167,25 @@ onMounted((): void => window.addEventListener("scroll", scrollEffect));
 onBeforeUnmount((): void => window.removeEventListener("scroll", scrollEffect));
 </script>
 
-<style scoped></style>
+<style scoped>
+.links {
+  position: relative;
+  font-size: 20px;
+}
+
+.links::before {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  right: 0;
+  height: 2px;
+  width: 0;
+  background-color: theme("backgroundColor.primary");
+  transition-duration: 0.3s;
+}
+
+.links:hover::before {
+  left: 0;
+  width: 100%;
+}
+</style>

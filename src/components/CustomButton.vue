@@ -9,10 +9,15 @@
 
 <script setup lang="ts">
 
-withDefaults(defineProps<{
-  icon: string[],
-    size?: string,
-}>(), {
-    size: 'text',
+// withDefaults(defineProps<{
+//   icon: string[],
+//     size: string,
+// }>(), {
+//     size: 'text',
+// });
+
+defineProps({
+  icon: Array,
+  size: String
 });
 </script>

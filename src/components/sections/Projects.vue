@@ -32,7 +32,7 @@
         <div class="absolute bottom-0 left-0 mb-5 flex w-full justify-around">
           <div>
             <a :href="project.urlLive" target="_blank">
-              <CustomButton :icon="['fas', 'arrow-up-right-from-square']"
+              <CustomButton :icon="['fas', 'arrow-up-right-from-square']" 
                 >website</CustomButton
               ></a
             >

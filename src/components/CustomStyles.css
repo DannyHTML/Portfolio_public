@@ -30,21 +30,6 @@
   @apply opacity-0;
 }
 
-/* Animation links header */
-
-.links {
-  @apply relative lg:text-xl;
-}
-
-.links::before {
-  @apply absolute -bottom-1 right-0 h-0.5 w-0 bg-primary duration-300;
-  content: "";
-}
-
-.links:hover::before {
-  @apply left-0 w-full;
-}
-
 /* h2 */
 
 .custom-title {
