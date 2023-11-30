@@ -1,6 +1,7 @@
 <template>
+  <!-- Need to make the container inside the outside full width div -->
   <div
-    class="fixed z-50 flex h-24 w-full items-center justify-between px-5 transition duration-300"
+    class="fixed container mx-auto z-50 flex h-24 items-center justify-between px-5 transition duration-300"
     :class="{ 'bg-black bg-opacity-100': scrolled }"
   >
     <div>
